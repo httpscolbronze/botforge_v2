@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Local data & secrets (database, documents, vectors, backups, logs)
+data/
+backend/data/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+*.db
+*.db-wal
+*.db-shm
