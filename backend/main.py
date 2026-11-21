@@ -230,7 +230,10 @@ for module in (
 
 
 # Serve the built frontend when it exists (production preview / Render).
-DIST_DIR = PROJECT_ROOT / "frontend" / "dist"
+DIST_DIR = PROJECT_ROOT / "backend" / "static"
+if not (DIST_DIR / "index.html").exists():
+    DIST_DIR = PROJECT_ROOT / "frontend" / "dist"
+
 if (DIST_DIR / "index.html").exists():
     app.mount("/", StaticFiles(directory=str(DIST_DIR), html=True), name="frontend")
     logger.info("Serving built frontend from %s", DIST_DIR)
