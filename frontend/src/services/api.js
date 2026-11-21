@@ -88,6 +88,9 @@ async function request(path, { method = 'GET', body } = {}) {
 
 export const api = {
   getClientId,
+  getAdminToken,
+  setAdminToken,
+  clearAdminToken,
 
   // -- system --------------------------------------------------------------
   health: () => request('/health'),
