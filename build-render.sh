@@ -5,7 +5,7 @@ echo "=== Building BotForge_v2 for Render ==="
 
 # 1. Install backend dependencies
 pip install --upgrade pip
-pip install -r backend/requirements.txt
+pip install -r requirements.txt
 
 # 2. Build frontend
 echo "Building frontend..."
